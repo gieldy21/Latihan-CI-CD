@@ -23,7 +23,7 @@ jobs:
       - name: Test API III
         run: mvn clean verify
   test:
-    name: Test Api
+    name: Test Api Gieldy
     needs: Build
     runs-on: ubuntu-latest
     steps:

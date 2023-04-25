@@ -5,10 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
-import starter.user.Delete;
-import starter.user.Get;
-import starter.user.Post;
-import starter.user.Put;
+import starter.user.*;
 
 public class UserSteps {
     @Steps
@@ -22,6 +19,9 @@ public class UserSteps {
 
     @Steps
     Delete delete;
+
+    @Steps
+    Get_User_3 get_user_3;
 
     @Given("I set GET endpoints")
     public void setGetApiEndpoint(){
@@ -102,6 +102,23 @@ public class UserSteps {
     public void validHttpResponseCode204(){
         delete.validHttpresponseCode204();
 
+    }
+
+    @Given("I set GET user 3 endpoints")
+    public void setGetApi3Endpoint(){
+
+        get_user_3.setApi3Endpoint();
+    }
+    @When("I send GET user 3 HTTP request")
+    public void sendGet3HttpRequest(){
+
+        get_user_3.sendGet3HttpRequest();
+    }
+
+    @And("I receive valid data user 3 for detail user")
+    public void receiveValidData3ForDetailUser(){
+
+        get_user_3.validateData3DetailUser();
     }
 }
 
