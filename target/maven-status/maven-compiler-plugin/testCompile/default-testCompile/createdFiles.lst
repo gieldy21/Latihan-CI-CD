@@ -1,4 +1,5 @@
 starter\user\Post.class
+starter\user\Get_User_3.class
 starter\CucumberTestSuite.class
 starter\stepdefinitions\UserSteps.class
 starter\user\Put.class
